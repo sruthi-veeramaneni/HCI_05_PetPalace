@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPalace - Products</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 2px solid #ccc;
+            background-color: white;
+        }
+
+        .header a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .header a:hover {
+            color: orange;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo .pet {
+            color: orange;
+        }
+
+        .logo .palace {
+            color: blue;
+        }
+
+        /* Container for pet cards */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* Pet card styles */
+        .pet-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            width: 250px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Images inside the pet cards */
+        .pet-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .pet-details {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Button styles for "Add to Cart" and "Buy Now" */
+        .pet-button, .cart-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .cart-button {
+            background-color: transparent;
+            color: #007bff;
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hover effect on "Add to Cart" */
+        .cart-button:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        /* Hover effect on "Buy Now" */
+        .pet-button:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Fixed cart logo at the bottom right */
+        .fixed-cart-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span class="pet">Pet</span><span class="palace">Palace</span>
+        </div>
+        <div>
+            <a href="D4.html">Home</a>
+            <a href="D5.html">Store</a>
+            <a href="D14.html">About Us</a>
+            <a href="D15.html">Contact Us</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Cockatiel -->
+        <div class="pet-card">
+            <a href="bird1.html">
+                <img src="https://img.freepik.com/premium-photo/portrait-parrot-cockatiel-cockatiel-closeup-gray-parrot-home-parrot_325857-763.jpg" alt="Cockatiel">
+            </a>
+            <div class="pet-details">Cockatiel<br>Gender: Male<br>Price: $100</div>
+            <button class="cart-button" onclick="addToCart('Cockatiel', 100)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        <!-- Budgerigar -->
+        <div class="pet-card">
+            <a href="bird2.html">
+                <img src="https://cdn.pixabay.com/photo/2022/11/11/10/04/budgerigar-7584648_640.jpg" alt="Budgerigar">
+            </a>
+            <div class="pet-details">Budgerigar<br>Gender: Female<br>Price: $80</div>
+            <button class="cart-button" onclick="addToCart('Budgerigar', 80)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        <!-- Parrot -->
+        <div class="pet-card">
+            <a href="bird3.html">
+                <img src="https://media.istockphoto.com/id/532238567/photo/green-indian-ringneck-parrot.jpg?s=612x612&w=0&k=20&c=CHcOXBxAxvGsKkZ4gg4ksU6yPhydGkEdUav7aghCmtA=" alt="Parrot">
+            </a>
+            <div class="pet-details">Parrot<br>Gender: Male<br>Price: $50</div>
+            <button class="cart-button" onclick="addToCart('Parrot', 50)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        <!-- Blue jay -->
+        <div class="pet-card">
+            <a href="bird4.html">
+                <img src="https://i.pinimg.com/736x/67/da/03/67da03cfabb1e5dc14a8f51195c5d61e.jpg" alt="Blue jay">
+            </a>
+            <div class="pet-details">Blue jay<br>Gender: Female<br>Price: $70</div>
+            <button class="cart-button" onclick="addToCart('Blue jay', 70)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Cart Logo with Hyperlink -->
+    <a href="cart.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6WdQPfFwZni0GLbb9erFAxEDjSzI5CRG9YA&s" alt="Cart Logo" class="fixed-cart-logo">
+    </a>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(product, price) {
+            const isItemInCart = cart.some(item => item.product === product);
+            if (isItemInCart) {
+                alert(`${product} is already in your cart.`);
+                return;
+            }
+            cart.push({ product, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+</html>

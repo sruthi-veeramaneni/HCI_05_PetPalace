@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPalace - Products</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 2px solid #ccc;
+            background-color: white;
+        }
+
+        .header a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .header a:hover {
+            color: orange;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo .pet {
+            color: orange;
+        }
+
+        .logo .palace {
+            color: blue;
+        }
+
+        /* Container for pet cards */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* Pet card styles */
+        .pet-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            width: 250px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pet-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .pet-details {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Button styles for "Add to Cart" and "Buy Now" */
+        .pet-button, .cart-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .cart-button {
+            background-color: transparent;
+            color: #007bff;
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cart-button:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .pet-button:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Fixed cart logo at the bottom right */
+        .fixed-cart-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span class="pet">Pet</span><span class="palace">Palace</span>
+        </div>
+        <div>
+            <a href="D4.html">Home</a>
+            <a href="D5.html">Store</a>
+            <a href="D14.html">About Us</a>
+            <a href="D15.html">Contact Us</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="pet-card">
+            <a href="cat1.html">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/y/v/h/large-persian-cat-poster-for-room-wall-decoration-size-12-x-18-original-imagufstxu9qz9tg.jpeg?q=90&crop=false" alt="Persian Cat"></a>
+            <div class="pet-details">Persian<br>Gender: Male<br>Price: $100</div>
+            <button class="cart-button" onclick="addToCart('Persian', 100)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        
+        <div class="pet-card">
+            <a href="cat2.html">
+                <img src="https://www.kimballstock.com/pix/ani/p/02/cat-01-je0067-01p.jpg" alt="Somali Cat"></a>
+            <div class="pet-details">Somali<br>Gender: Female<br>Price: $80</div>
+            <button class="cart-button" onclick="addToCart('Somali', 80)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        
+        <div class="pet-card">
+            <a href="cat3.html">
+                <img src="https://lh6.googleusercontent.com/proxy/KViM7P6E38zcjNKQR40B2czy_NMut8FDpB5w32XzLRUYe21m6Vozg5XRzfeW7ea0ole4g5-OfdxdE4L6OkvSSTb2tmUpDbMe" alt="Turkish Van"></a>
+            <div class="pet-details">Turkish Van<br>Gender: Male<br>Price: $50</div>
+            <button class="cart-button" onclick="addToCart('Turkish Van', 50)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        
+        <div class="pet-card">
+            <a href="cat4.html">
+                <img src="https://www.creativefabrica.com/wp-content/uploads/2022/12/30/Ragdoll-Cat-Portrait-Intellectual-Art-Realistic-Digital-Art-Beautiful-Colorful-55320198-1.png" alt="Ragdoll Cat"></a>
+            <div class="pet-details">Ragdoll<br>Gender: Female<br>Price: $70</div>
+            <button class="cart-button" onclick="addToCart('Ragdoll', 70)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Cart Logo with Hyperlink -->
+    <a href="cart.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6WdQPfFwZni0GLbb9erFAxEDjSzI5CRG9YA&s" alt="Cart Logo" class="fixed-cart-logo">
+    </a>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(product, price) {
+            const isItemInCart = cart.some(item => item.product === product);
+            if (isItemInCart) {
+                alert(`${product} is already in your cart.`);
+                return;
+            }
+            cart.push({ product, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+</html>
