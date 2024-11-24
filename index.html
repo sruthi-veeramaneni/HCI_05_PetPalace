@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPalace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            margin-top: 50px;
+            position: relative;
+        }
+        .header {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ff9900;
+        }
+        .header .blue {
+            color: #3399ff;
+        }
+        .subheader {
+            font-size: 20px;
+            color: #333;
+            margin-top: -10px;
+        }
+        .tagline {
+            font-size: 30px;
+            color: #a64d79;
+            margin: 20px 0;
+        }
+        .btn {
+            background-color:#007bff;
+            color: rgb(255, 255, 255);
+            padding: 13px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3; 
+            transform: scale(1.05); 
+        }
+        .animal-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .animal-row img {
+            height: 600px; 
+            border-radius: 10px;
+            width: 1000%;
+        }
+        .top-left-label {
+            position: absolute;
+            top: -20px; 
+            left: 10px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .top-left-label .blue {
+            color: #3399ff;
+        }
+        .top-left-label .orange {
+            color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-left-label"><span class="orange">Pet</span><span class="blue">Palace</span></div>
+        <div class="animal-row">
+            <img src="https://www.shutterstock.com/image-photo/group-pets-together-front-view-600nw-285209249.jpg" alt="Parrot">
+        </div>
+        <h1 class="header">Pet<span class="blue">Palace</span></h1>
+        <p class="subheader">Secure and User-friendly Marketplace</p>
+        <p class="tagline">Find Your Perfect Companion</p>
+        <a href="D2.html" class="btn">Register Now</a>
+    </div>
+</body>
+</html>

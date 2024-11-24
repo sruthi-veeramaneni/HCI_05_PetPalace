@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Show Hidden Dropdown Menu Using HTML and CSS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+      
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 2px solid #ccc;
+            background-color: white;
+        }
+
+        .header a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .header a:hover {
+            color: orange; 
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo .pet {
+            color: orange;
+        }
+
+        .logo .palace {
+            color: blue;
+        }
+
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        
+        .pet-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            width: 250px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pet-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .pet-details {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+            text-align: center;
+        }
+
+
+        .pet-button, .cart-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .cart-button {
+            background-color: transparent;
+            color: #007bff;
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cart-button:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .pet-button:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+
+      
+        .fixed-cart-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span class="pet">Pet</span><span class="palace">Palace</span>
+        </div>
+        <div>
+            <a href="D4.html">Home</a>
+            <a href="D5.html">Store</a>
+            <a href="D14.html">About Us</a>
+            <a href="D15.html">Contact Us</a>
+        </div>
+    </div>
+    
+    <div class="container">
+       
+        <div class="pet-card">
+            <a href="rabbit1.html">
+                <img src="https://i.pinimg.com/736x/06/d2/40/06d240b3857a6d601f7f658f1a174f35.jpg" alt="Holland Lop">
+            </a>
+            <div class="pet-details">Holland Lop<br>Gender: Male<br>Price: $100</div>
+            <button class="cart-button" onclick="addToCart('Holland Lop', 100)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        
+       
+        <div class="pet-card">
+            <a href="rabbit2.html">
+                <img src="https://i.redd.it/is-there-any-flags-with-rabbits-bunnies-on-them-i-havent-v0-o7mdp0dl1t2c1.png?width=1554&format=png&auto=webp&s=f4fa1c15cf9bb32344dc17c27648bae46ec64a22" alt="Angora">
+            </a>
+            <div class="pet-details">Angora<br>Gender: Female<br>Price: $80</div>
+            <button class="cart-button" onclick="addToCart('Angora', 80)">Add to Cart</button>
+            <a href="D11t.html" class="pet-button">Buy Now</a>
+        </div>
+        
+      
+        <div class="pet-card">
+            <a href="rabbit3.html">
+                <img src="https://www.superstock.com/cdn/4421/Comp/4421-20747.webp" alt="Lionhead">
+            </a>
+            <div class="pet-details">Lionhead<br>Gender: Male<br>Price: $50</div>
+            <button class="cart-button" onclick="addToCart('Lionhead', 50)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+        
+       
+        <div class="pet-card">
+            <a href="rabbit4.html">
+                <img src="https://www.mindenpictures.com/cache/pcache/00620327.jpg" alt="European Rabbit">
+            </a>
+            <div class="pet-details">European Rabbit<br>Gender: Female<br>Price: $70</div>
+            <button class="cart-button" onclick="addToCart('European Rabbit', 70)">Add to Cart</button>
+            <a href="D11.html" class="pet-button">Buy Now</a>
+        </div>
+    </div>
+
+    <a href="cart.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6WdQPfFwZni0GLbb9erFAxEDjSzI5CRG9YA&s" alt="Cart Logo" class="fixed-cart-logo">
+    </a>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(product, price) {
+            const isItemInCart = cart.some(item => item.product === product);
+            if (isItemInCart) {
+                alert(`${product} is already in your cart.`);
+                return;
+            }
+            cart.push({ product, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+</html>

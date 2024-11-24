@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary - PetPalace</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 2px solid #ccc;
+            background-color: white;
+        }
+        .header a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .header a:hover {
+            color: orange;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo .orange {
+            color: orange;
+        }
+        .logo .blue {
+            color: #3399ff;
+        }
+       
+        .stepper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+        }
+        .stepper div {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            font-size: 14px;
+            flex-direction: column;
+        }
+        .circle {
+            background-color: #0066FF;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .line {
+            width: 100px;
+            height: 2px;
+            background-color: #ccc;
+        }
+        .line.active {
+            background-color: #0066FF;
+        }
+     
+        .order-summary {
+            padding: 20px 40px;
+            background-color: white;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .address-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .address-section a {
+            color: #0066FF;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+       
+        .pet-details {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .pet-photo {
+            width: 100px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-right: 20px;
+            color: transparent; 
+        }
+        .pet-info {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .ratings {
+            color: #FFCC00;
+        }
+        .quantity-select {
+            font-size: 16px;
+        }
+        .continue-button {
+            background-color: orange;
+            color: black;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .continue-button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="header">
+        <div class="logo"><span class="orange">Pet</span><span class="blue">Palace</span></div>
+        <div>
+            <a href="D4.html">Home</a>
+            <a href="D5.html">Store</a>
+            <a href="D14.html">About Us</a>
+            <a href="D15.html">Contact Us</a>
+        </div>
+    </div>
+  
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+      
+        <div class="stepper">
+            <div>
+                <div class="circle">1</div>
+                <div>Address</div>
+            </div>
+            <div class="line active"></div>
+            <div>
+                <div class="circle" style="background-color: #0066FF; color: white;">2</div>
+                <div>Order Summary</div>
+            </div>
+            <div class="line"></div>
+            <div>
+                <div class="circle">3</div>
+                <div>Payment</div>
+            </div>
+        </div>
+      
+        <div class="address-section">
+            <div>Deliver to: <span style="font-weight: normal;">Your address will be viewed here</span></div>
+            <a href="D11.html">Change</a>
+        </div>
+       
+        <div class="pet-details">
+            <div class="pet-photo" style="background-image: url('https://i.pinimg.com/originals/21/2a/a0/212aa0b2b6cd6dee166b553aa9fcb740.png');"></div>
+            <div class="pet-info">
+                <p>Breed: Labrador Retriever</p>
+                <p>Cost: $2000</p>
+                <p>Ratings: <span class="ratings">★★★★★</span></p>
+                <p>Qty:
+                    <select class="quantity-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
+            </div>
+        </div>
+        
+        <a href="D16.html"><button class="continue-button">Continue</button></a>
+    </div>
+</body>
+</html>
